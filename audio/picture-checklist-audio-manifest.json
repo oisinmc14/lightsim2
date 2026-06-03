@@ -1,0 +1,186 @@
+[
+  {
+    "id": "intro_a",
+    "text": "下面将进行模拟夜间行驶灯光的考试",
+    "source": "best",
+    "start": 0.58,
+    "end": 3.62,
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 0.0,
+    "clipEnd": 3.04
+  },
+  {
+    "id": "intro_b",
+    "text": "请在五秒内做出相应的灯光操作",
+    "source": "best",
+    "start": 3.96,
+    "end": 6.72,
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 3.26,
+    "clipEnd": 6.02
+  },
+  {
+    "id": "start_headlights",
+    "text": "请开启前照灯",
+    "source": "best",
+    "start": 8.98,
+    "end": 10.6,
+    "action": "low",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 6.24,
+    "clipEnd": 7.86
+  },
+  {
+    "id": "meeting_vehicle",
+    "text": "夜间与机动车会车",
+    "source": "best",
+    "start": 153.62,
+    "end": 155.22,
+    "action": "low",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 8.08,
+    "clipEnd": 9.68
+  },
+  {
+    "id": "traffic_light_intersection",
+    "text": "通过有信号灯控制的路口",
+    "source": "robot",
+    "start": 90.82,
+    "end": 95.35,
+    "action": "low",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 9.9,
+    "clipEnd": 14.43
+  },
+  {
+    "id": "follow_close",
+    "text": "夜间同方向近距离跟车行驶",
+    "source": "best",
+    "start": 116.46,
+    "end": 119.28,
+    "action": "low",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 14.65,
+    "clipEnd": 17.47
+  },
+  {
+    "id": "well_lit_road",
+    "text": "在有路灯照明良好的道路行驶",
+    "source": "robot",
+    "start": 229.3,
+    "end": 235.7,
+    "action": "low",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 17.69,
+    "clipEnd": 24.09
+  },
+  {
+    "id": "poor_lighting_road",
+    "text": "进入无照明或照明不良的道路行驶",
+    "source": "robot",
+    "start": 305.02,
+    "end": 309.2,
+    "action": "high",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 24.31,
+    "clipEnd": 28.49
+  },
+  {
+    "id": "roadside_parking",
+    "text": "在路边临时停车",
+    "source": "best",
+    "start": 32.36,
+    "end": 33.82,
+    "action": "parking",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 28.71,
+    "clipEnd": 30.17
+  },
+  {
+    "id": "overtake",
+    "text": "超车",
+    "source": "robot",
+    "start": 48.43,
+    "end": 49.43,
+    "action": "flash",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 30.39,
+    "clipEnd": 31.39
+  },
+  {
+    "id": "sharp_bend",
+    "text": "通过急弯",
+    "source": "robot",
+    "start": 363.76,
+    "end": 365.89,
+    "action": "flash",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 31.61,
+    "clipEnd": 33.74
+  },
+  {
+    "id": "slope",
+    "text": "通过坡路",
+    "source": "robot",
+    "start": 142.85,
+    "end": 147.31,
+    "action": "flash",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 33.96,
+    "clipEnd": 38.42
+  },
+  {
+    "id": "arch_bridge",
+    "text": "通过拱桥",
+    "source": "robot",
+    "start": 406.46,
+    "end": 410.65,
+    "action": "flash",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 38.64,
+    "clipEnd": 42.83
+  },
+  {
+    "id": "no_traffic_light_intersection",
+    "text": "通过没有交通信号灯控制的路口",
+    "source": "robot",
+    "start": 81.98,
+    "end": 87.82,
+    "action": "flash",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 43.05,
+    "clipEnd": 48.89
+  },
+  {
+    "id": "pedestrian_crossing",
+    "text": "通过人行横道",
+    "source": "robot",
+    "start": 173.58,
+    "end": 176.22,
+    "action": "flash",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 49.11,
+    "clipEnd": 51.75
+  },
+  {
+    "id": "exam_complete",
+    "text": "模拟夜间考试完成",
+    "source": "best",
+    "start": 37.76,
+    "end": 39.3,
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 51.97,
+    "clipEnd": 53.51
+  },
+  {
+    "id": "close_all",
+    "text": "请关闭所有灯光",
+    "source": "best",
+    "start": 39.84,
+    "end": 41.08,
+    "action": "off",
+    "src": "audio/picture-checklist-audio.wav",
+    "clipStart": 53.73,
+    "clipEnd": 54.97
+  }
+]
