@@ -41,13 +41,13 @@
 
           <div class="reveal-strip" aria-label="Prompt reveal controls">
             <button id="start-voice-button" class="primary-button" type="button">Start voice</button>
-            <button id="test-english-button" class="secondary-button" type="button">Test English sound</button>
+            <button id="test-english-button" class="secondary-button diagnostic-control" type="button">Test English sound</button>
             <button id="replay-button" class="secondary-button" type="button">Replay voice</button>
             <button id="show-chinese-button" class="secondary-button" type="button">Show Chinese</button>
             <button id="show-meaning-button" class="secondary-button" type="button">Show meaning</button>
           </div>
           <p class="voice-status" id="voice-status">Voice not started yet.</p>
-          <p class="voice-list" id="voice-list"></p>
+          <p class="voice-list" id="voice-list" hidden></p>
 
           <div class="prompt-actions">
             <button id="speak-button" class="secondary-button" type="button">Hear Chinese</button>
@@ -115,24 +115,23 @@
       </section>
 
       <aside class="car-panel" aria-label="Car light controls">
-        <div class="windshield">
-          <div class="road-line"></div>
-          <div class="beam beam-left"></div>
-          <div class="beam beam-right"></div>
-        </div>
-
         <div class="dashboard">
           <p class="panel-label">Use the dashboard controls</p>
           <div class="training-note" id="training-note">
             Exam mode: start command, 6 separate random prompts, then closing command.
           </div>
-          <div class="version-note">Build: separate-picture-prompts</div>
+          <div class="version-note">Build: compact-mobile-beams</div>
           <div class="cockpit" id="answers" aria-label="Car controls answer area">
-            <div class="steering-wheel" aria-hidden="true">
-              <div class="wheel-center">VW</div>
-            </div>
-
             <div class="control-console">
+              <div class="light-preview" aria-hidden="true">
+                <span class="preview-label">Light pattern</span>
+                <div class="beam-stage">
+                  <span class="beam-ray low-ray"></span>
+                  <span class="beam-ray high-ray"></span>
+                  <span class="hazard-pulse"></span>
+                </div>
+              </div>
+
               <div class="switch-cluster" aria-label="Headlight rotary switch">
                 <span class="cluster-label">Headlight switch</span>
                 <button class="car-control dial-option" type="button" data-action="off" data-control="off">
@@ -150,7 +149,7 @@
               </div>
 
               <div class="stalk-cluster" aria-label="Steering column stalk">
-                <span class="cluster-label">Left stalk</span>
+                <span class="cluster-label">Beam stalk</span>
                 <button class="car-control stalk-option" type="button" data-action="high" data-control="high">
                   <span>Push</span>
                   <strong>High beam</strong>
@@ -188,6 +187,6 @@
       </div>
     </div>
 
-    <script src="./app.js?v=20260601-separate-picture-prompts"></script>
+    <script src="./app.js?v=20260603-compact-mobile-beams"></script>
   </body>
 </html>

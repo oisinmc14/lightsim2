@@ -41,14 +41,13 @@ const actions = [
   },
 ];
 
-const bestAudio = "audio/best-test-audio.wav";
-const supplementalAudio = "audio/robot-only-test-audio.wav";
+const pictureAudio = "audio/picture-checklist-audio.wav";
 const TEST_AUDIO_RATE = 0.86;
 const CLIP_SEQUENCE_GAP_MS = 450;
 
 const examIntroClips = [
-  { src: bestAudio, start: 0.0, end: 3.04 },
-  { src: bestAudio, start: 3.22, end: 5.98 },
+  { src: pictureAudio, start: 0.0, end: 3.04 },
+  { src: pictureAudio, start: 3.26, end: 6.02 },
 ];
 
 const questions = [
@@ -58,141 +57,132 @@ const questions = [
     pinyin: "qing kai qi qian zhao deng",
     en: "Please turn on the headlights",
     breakdown: "请开启 = please turn on · 前照灯 = headlights",
-    audioClip: { src: bestAudio, start: 6.16, end: 7.78 },
+    audioClip: { src: pictureAudio, start: 6.24, end: 7.86 },
     action: "low",
   },
   {
     no: 2,
-    zh: "夜间同方向近距离跟车行驶",
-    pinyin: "ye jian tong fang xiang jin ju li gen che xing shi",
-    en: "At night, driving closely behind another vehicle in the same direction",
-    breakdown: "夜间 = at night · 同方向 = same direction · 近距离 = close distance · 跟车行驶 = following a car",
-    audioClip: { src: bestAudio, start: 24.82, end: 27.64 },
+    zh: "会车",
+    pinyin: "hui che",
+    en: "Meet an oncoming vehicle",
+    breakdown: "会车 = meeting/passing oncoming traffic",
+    audioClip: { src: pictureAudio, start: 8.08, end: 9.68 },
     action: "low",
   },
   {
     no: 3,
-    zh: "夜间在没有路灯，照明不良条件下行驶",
-    pinyin: "ye jian zai mei you lu deng, zhao ming bu liang tiao jian xia xing shi",
-    en: "At night, driving where there are no streetlights and lighting is poor",
-    breakdown: "没有路灯 = no streetlights · 照明不良 = poor lighting · 条件下行驶 = driving under conditions",
-    audioClip: { src: bestAudio, start: 9.96, end: 13.1 },
-    action: "high",
+    zh: "通过有信号灯控制的路口",
+    pinyin: "tong guo you xin hao deng kong zhi de lu kou",
+    en: "Pass through an intersection controlled by signal lights",
+    breakdown: "有信号灯控制 = controlled by signal lights · 路口 = intersection",
+    audioClip: { src: pictureAudio, start: 9.9, end: 14.43 },
+    action: "low",
   },
   {
     no: 4,
-    zh: "夜间与机动车会车",
-    pinyin: "ye jian yu ji dong che hui che",
-    en: "At night, meeting an oncoming motor vehicle",
-    breakdown: "与机动车会车 = meet/pass oncoming motor vehicle traffic",
-    audioClip: { src: bestAudio, start: 15.22, end: 16.94 },
+    zh: "夜间同方向近距离跟车行驶",
+    pinyin: "ye jian tong fang xiang jin ju li gen che xing shi",
+    en: "At night, driving closely behind another vehicle in the same direction",
+    breakdown: "夜间 = at night · 同方向 = same direction · 近距离 = close distance · 跟车行驶 = following a car",
+    audioClip: { src: pictureAudio, start: 14.65, end: 17.47 },
     action: "low",
   },
   {
     no: 5,
-    zh: "路边临时停车",
-    pinyin: "lu bian lin shi ting che",
-    en: "Temporary roadside parking",
-    breakdown: "路边 = roadside · 临时 = temporary · 停车 = park/stop",
-    audioClip: { src: bestAudio, start: 17.12, end: 18.58 },
-    action: "parking",
+    zh: "在有路灯照明良好的道路行驶",
+    pinyin: "zai you lu deng zhao ming liang hao de dao lu xing shi",
+    en: "Drive on a road with streetlights and good lighting",
+    breakdown: "有路灯 = has streetlights · 照明良好 = well lit · 道路行驶 = driving on the road",
+    audioClip: { src: pictureAudio, start: 17.69, end: 24.09 },
+    action: "low",
   },
   {
     no: 6,
-    zh: "通过坡路",
-    pinyin: "tong guo po lu",
-    en: "Pass through a slope road",
-    breakdown: "通过 = pass through · 坡路 = slope road",
-    audioClip: { src: supplementalAudio, start: 40.81, end: 45.27 },
-    action: "flash",
+    zh: "进入无照明或照明不良的道路行驶",
+    pinyin: "jin ru wu zhao ming huo zhao ming bu liang de dao lu xing shi",
+    en: "Enter a road with no lighting or poor lighting",
+    breakdown: "无照明 = no lighting · 照明不良 = poor lighting · 道路行驶 = driving on the road",
+    audioClip: { src: pictureAudio, start: 24.31, end: 28.49 },
+    action: "high",
   },
   {
     no: 7,
-    zh: "通过急弯",
-    pinyin: "tong guo ji wan",
-    en: "Pass through a sharp bend",
-    breakdown: "通过 = pass through · 急弯 = sharp bend",
-    audioClip: { src: supplementalAudio, start: 52.63, end: 57.67 },
-    action: "flash",
+    zh: "在路边临时停车",
+    pinyin: "zai lu bian lin shi ting che",
+    en: "Temporarily park by the roadside",
+    breakdown: "路边 = roadside · 临时 = temporary · 停车 = park/stop",
+    audioClip: { src: pictureAudio, start: 28.71, end: 30.17 },
+    action: "parking",
   },
   {
     no: 8,
-    zh: "通过拱桥",
-    pinyin: "tong guo gong qiao",
-    en: "Pass through an arch bridge",
-    breakdown: "通过 = pass through · 拱桥 = arch bridge",
-    audioClip: { src: supplementalAudio, start: 64.43, end: 66.38 },
-    action: "flash",
-  },
-  {
-    no: 9,
     zh: "超车",
     pinyin: "chao che",
     en: "Overtake",
     breakdown: "超车 = overtake / pass another vehicle",
-    audioClip: { src: supplementalAudio, start: 17.89, end: 18.89 },
+    audioClip: { src: pictureAudio, start: 30.39, end: 31.39 },
+    action: "flash",
+  },
+  {
+    no: 9,
+    zh: "通过急弯",
+    pinyin: "tong guo ji wan",
+    en: "Pass through a sharp bend",
+    breakdown: "通过 = pass through · 急弯 = sharp bend",
+    audioClip: { src: pictureAudio, start: 31.61, end: 33.74 },
     action: "flash",
   },
   {
     no: 10,
-    zh: "夜间通过有交通信号灯控制的路口",
-    pinyin: "ye jian tong guo you jiao tong xin hao deng kong zhi de lu kou",
-    en: "At night, passing an intersection controlled by traffic lights",
-    breakdown: "有交通信号灯控制 = controlled by traffic lights · 路口 = intersection",
-    audioClip: { src: bestAudio, start: 32.46, end: 35.24 },
-    action: "low",
+    zh: "通过坡路",
+    pinyin: "tong guo po lu",
+    en: "Pass through a slope road",
+    breakdown: "通过 = pass through · 坡路 = slope road",
+    audioClip: { src: pictureAudio, start: 33.96, end: 38.42 },
+    action: "flash",
   },
   {
     no: 11,
-    zh: "夜间在照明良好的道路上行驶",
-    pinyin: "ye jian zai zhao ming liang hao de dao lu shang xing shi",
-    en: "At night, driving on a well-lit road",
-    breakdown: "照明良好 = well lit · 道路上 = on the road · 行驶 = driving",
-    audioClip: { src: bestAudio, start: 21.9, end: 24.64 },
-    action: "low",
+    zh: "通过拱桥",
+    pinyin: "tong guo gong qiao",
+    en: "Pass through an arch bridge",
+    breakdown: "通过 = pass through · 拱桥 = arch bridge",
+    audioClip: { src: pictureAudio, start: 38.64, end: 42.83 },
+    action: "flash",
   },
   {
     no: 12,
+    zh: "通过没有交通信号灯控制的路口",
+    pinyin: "tong guo mei you jiao tong xin hao deng kong zhi de lu kou",
+    en: "Pass through an intersection without traffic lights",
+    breakdown: "没有交通信号灯控制 = no traffic lights controlling it · 路口 = intersection",
+    audioClip: { src: pictureAudio, start: 43.05, end: 48.89 },
+    action: "flash",
+  },
+  {
+    no: 13,
+    zh: "通过人行横道",
+    pinyin: "tong guo ren xing heng dao",
+    en: "Pass through a pedestrian crossing",
+    breakdown: "通过 = pass through · 人行横道 = pedestrian crossing",
+    audioClip: { src: pictureAudio, start: 49.11, end: 51.75 },
+    action: "flash",
+  },
+  {
+    no: 99,
     zh: "模拟夜间考试完成，请关闭所有灯光",
     pinyin: "mo ni ye jian kao shi wan cheng, qing guan bi suo you deng guang",
     en: "The simulated night exam is complete. Please turn off all lights",
     breakdown: "考试完成 = test complete · 关闭 = turn off · 所有灯光 = all lights",
     audioClips: [
-      { src: bestAudio, start: 18.76, end: 20.3 },
-      { src: bestAudio, start: 20.48, end: 21.72 },
+      { src: pictureAudio, start: 51.97, end: 53.51 },
+      { src: pictureAudio, start: 53.73, end: 54.97 },
     ],
     action: "off",
   },
-  {
-    no: 13,
-    zh: "请关闭所有灯光",
-    pinyin: "qing guan bi suo you deng guang",
-    en: "Please turn off all lights",
-    breakdown: "关闭 = turn off · 所有灯光 = all lights",
-    audioClip: { src: bestAudio, start: 20.48, end: 21.72 },
-    action: "off",
-  },
-  {
-    no: 14,
-    zh: "通过没有交通信号灯控制的路口",
-    pinyin: "tong guo mei you jiao tong xin hao deng kong zhi de lu kou",
-    en: "Pass through an intersection without traffic lights",
-    breakdown: "没有交通信号灯控制 = no traffic lights controlling it · 路口 = intersection",
-    audioClip: { src: supplementalAudio, start: 28.53, end: 34.37 },
-    action: "flash",
-  },
-  {
-    no: 15,
-    zh: "通过人行横道",
-    pinyin: "tong guo ren xing heng dao",
-    en: "Pass through a pedestrian crossing",
-    breakdown: "通过 = pass through · 人行横道 = pedestrian crossing",
-    audioClip: { src: supplementalAudio, start: 45.45, end: 48.09 },
-    action: "flash",
-  },
 ];
 
-const examMiddlePromptNumbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15];
+const examMiddlePromptNumbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 const state = {
   index: 0,
@@ -331,13 +321,13 @@ function createExamRound() {
   return [
     questionByNumber.get(1),
     ...middlePrompts,
-    questionByNumber.get(12),
+    questionByNumber.get(99),
   ].filter(Boolean);
 }
 
 function createPracticeRound() {
-  const finalPrompt = questions.find((question) => question.no === 12);
-  const practicePrompts = questions.filter((question) => question.no !== 12 && question.no !== 13);
+  const finalPrompt = questions.find((question) => question.no === 99);
+  const practicePrompts = questions.filter((question) => question.no !== 99);
   return finalPrompt ? [...practicePrompts, finalPrompt] : practicePrompts;
 }
 
@@ -815,8 +805,9 @@ function revealMeaning() {
 }
 
 function renderLessons() {
+  const studyQuestions = questions.filter((question) => question.no !== 99);
   const groups = actions.map((action) => {
-    const groupQuestions = questions.filter((question) => question.action === action.id);
+    const groupQuestions = studyQuestions.filter((question) => question.action === action.id);
     return `
       <article class="lesson">
         <h3>${action.chinese}</h3>
@@ -833,6 +824,7 @@ function renderLessons() {
 
 function renderReviewTable() {
   elements.reviewTable.innerHTML = questions
+    .filter((question) => question.no !== 99)
     .map((question) => {
       const action = getAction(question.action);
       return `

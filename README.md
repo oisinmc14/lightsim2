@@ -1,6 +1,7 @@
 # Chinese Night Lights Practice
 
 A mobile-friendly practice app for the Chinese driving-test night lighting commands.
+The current audio build uses a picture-checklist-aligned WAV bundle for the 13 rule prompts plus separate exam start/end prompts.
 
 ## Modes
 
